@@ -1,5 +1,5 @@
 # Herramientas_de_BigData
-![image](https://github.com/ylathan/herramientas_big_data/assets/98925562/aae0f765-269a-48c3-b33f-fa4933e3c09d)
+![image](https://github.com/ylathan/herramientas_big_data/assets/98925562/19a1d986-bd3d-4b25-9686-e0ba89c0f797)
 
 # Practica Integradora
 
