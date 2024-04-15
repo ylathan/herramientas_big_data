@@ -22,7 +22,7 @@ Es importante mencionar que el entorno completo consume muchos recursos de su eq
 Implementar y ejecutar cada script por separado. 
 
     '''
-    git clone https://github.com/lopezdar222/herramientas_big_data
+    git clone https://github.com/ylathan/herramientas_big_data
     cd herramientas_big_data
     sudo docker-compose -f docker-compose-vX.yml up -d
     '''
