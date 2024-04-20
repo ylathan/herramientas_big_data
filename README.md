@@ -30,19 +30,17 @@ Implementar y ejecutar cada script por separado.
 
 ## 1) HDFS
 
-Utilizar el entorno docker-compose-v1.yml
+Utilizar el entorno docker-compose-v1.yml.Donde tenemos dos contenedores uno llamado 'namenode' y otro 'datanode'
 ````
     sudo docker-compose -f docker-compose-v1.yml up -d
 ````
-Creamos el contenedor llamado (namenode) y entramos a su carpeta.
+Ponemos en marcha el contenedor 'namenode' y entramos a su carpeta base'home' donde introduciremos el directorio llamado Datasets.
 ````
     sudo docker exec -it namenode bash
 ````
 ````
     cd home 
 ````
-
-Crearemos el directorio Datasets y salimos
 ````        
     mkdir Datasets
 ````
