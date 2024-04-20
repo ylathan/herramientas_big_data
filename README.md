@@ -48,7 +48,8 @@ Ponemos en marcha el contenedor 'namenode' y entramos a su carpeta base'home' do
     exit
 ````
 
-Ejecutar el archivo 'Paso00.sh' el cual contiene los comandos para copiar los archivos desde tu sistema local al contenedor.Para poder ejecutarlo le damos permiso de ejecucion.sudo docker cp Datasets/canaldeventa/CanalDeVenta.csv namenode:/home/Datasets/canaldeventa/CanalDeVenta.csv
+> Ejecutar el archivo 'Paso00.sh' el cual contiene los comandos para copiar los archivos desde tu sistema local al contenedor.Para poder   ejecutarlo le damos permiso de ejecucion.sudo docker cp Datasets/canaldeventa/CanalDeVenta.csv 
+  namenode:/home/Datasets/canaldeventa/CanalDeVenta.csv
 ````
     chmod u+x Paso00.sh
 ````
