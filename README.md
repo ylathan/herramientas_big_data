@@ -48,9 +48,7 @@ Ponemos en marcha el contenedor 'namenode' y entramos a su carpeta base'home' do
     exit
 ````
 
-Ejecutar el archivo 'Paso00.sh' el cual contiene los comandos para copiar los archivos desde tu sistema local al contenedor.
- 
-Para poder ejecutarlo le damos permiso de ejecucion
+Ejecutar el archivo 'Paso00.sh' el cual contiene los comandos para copiar los archivos desde tu sistema local al contenedor.Para poder ejecutarlo le damos permiso de ejecucion.sudo docker cp Datasets/canaldeventa/CanalDeVenta.csv namenode:/home/Datasets/canaldeventa/CanalDeVenta.csv
 ````
     chmod u+x Paso00.sh
 ````
@@ -58,6 +56,7 @@ Con el primer comado ejecutamos todos los scripts dentro del Paso00.sh o podriam
 ````
     sudo ./Paso00.sh
 ````
+Ejemplo del primer script dentro del Paso00.sh (sudo docker cp Datasets/canaldeventa/CanalDeVenta.csv namenode:/home/Datasets/canaldeventa/CanalDeVenta.csv)
 ````
     sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo>
 ````
@@ -69,7 +68,7 @@ Nos ubicamos en el directorio 'home':
 ````
     cd home
 ````    
-Creamos el directorio 'data':
+Creamos un directorio en HDFS '/data':
 ````
     hdfs dfs -mkdir -p /data
 ````   
@@ -77,7 +76,11 @@ Pegamos los archivos csv provistos a HDFS:
 ````
     hdfs dfs -put /home/Datasets/* /data
 ````
-Este proceso de creación de la carpeta data y copiado de los arhivos, debe poder ejecutarse desde un shell script.
+Este proceso de creación de la carpeta data y copiado de los arhivos, debe poder ejecutarse desde un shell.
+Explicacion de algunos fragmentos de comando usados:
+> -it:modo interactivo.Permite al usuario interactuar con el contenedor a través de una terminal.
+> -p: para publicar los puertos entre el sistema host y el contenedor.
+> -put: especifica que se copiaran los archivos desde el sistema host hacia el HDFS. 
 
 Nota: Busque dfs.blocksize y dfs.replication en http://<IP_Anfitrion>:9870/conf para encontrar los valores de tamaño de bloque y factor de réplica respectivamente entre otras configuraciones del sistema Hadoop.
 
