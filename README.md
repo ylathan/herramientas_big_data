@@ -120,10 +120,13 @@ Para comprobar que cargo correctamente la base de datos entramos a hive y ejecut
 ![image](https://github.com/ylathan/Herramientas-de-BigData/assets/98925562/254ed713-c805-4fca-bbc9-ac073f1f5f04)
 
 ## 3) Formatos de Almacenamiento
+Las tablas creadas en el punto 2 a partir de archivos en formato csv, deben ser almacenadas en formato Parquet + Snappy. Tener en cuenta además de aplicar particiones para alguna de las tablas.
+
+Ejecutamos el entorno.
 ````
     sudo docker-compose -f docker-compose-v2.yml up -d
 ````
-El comando copia el archivo 'Paso03.hql' desde tu sistema de archivos local al directorio '/opt/' dentro del contenedor llamado "hive-server".
+Copia el archivo 'Paso03.hql' desde tu sistema de archivos local al directorio '/opt/' dentro del contenedor llamado "hive-server".
 ````        
     sudo docker cp ./Paso03.hql hive-server:/opt/
 ````
