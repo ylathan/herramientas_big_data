@@ -150,7 +150,7 @@ Salir cuando termines de hacer pruebas.Con cualquiera de los dos comandos.
 
 La mejora en la velocidad de consulta que puede proporcionar un índice tiene el costo del procesamiento adicional para crear el índice y el espacio en disco para almacenar las referencias del índice. Se recomienda que los índices se basen en las columnas que utiliza en las condiciones de filtrado. El índice en la tabla puede degradar su rendimiento en caso de que no los esté utilizando. Crear índices en alguna de las tablas cargadas y probar los resultados:
 
-Dentro del hive realizamos diferentes consultas y les medimos el tiempo.Estas consultas se realizan antes de agregar los indices.
+Antes de agregar los indices,dentro del hive realizamos diferentes consultas y les medimos el tiempo.
 ````
     SELECT IdProducto, sum(Precio*Cantidad) FROM venta GROUP BY IdProducto;
 ````
@@ -167,9 +167,29 @@ Dentro del hive realizamos diferentes consultas y les medimos el tiempo.Estas co
 
 Insertamos los indices
 
-         CREATE INDEX index_Fecha_compra ON TABLE venta(Fecha) AS 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler' WITH DEFERRED REBUILD;
-         
+Tabla ejemplo
+````
+CREATE INDEX index_name
+ ON TABLE base_table_name (col_name, ...)
+ AS index_type
+ [WITH DEFERRED REBUILD]
+ [IDXPROPERTIES (property_name=property_value, ...)]
+ [IN TABLE index_table_name]
+ [ [ ROW FORMAT ...] STORED AS ...
+ | STORED BY ... ]
+ [LOCATION hdfs_path]
+ [TBLPROPERTIES (...)]
+ [COMMENT "index comment"];
+````
+Tabla personal
 
+````
+    CREATE INDEX index_Fecha_compra
+    ON TABLE venta(Fecha)
+    AS 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler'
+    WITH DEFERRED REBUILD;
+
+````
 
 
 
