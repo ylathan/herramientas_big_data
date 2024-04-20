@@ -191,6 +191,16 @@ Tabla personal
 
 ````
 
+##5)No-SQL
+Se puede utilizar el entorno docker-compose-v3.yml
+````
+  sudo docker-compose -f docker-compose-v3.yml up -d
+````
+#### 1) HBase:
+
+Instrucciones:
+````
+	1- sudo docker exec -it hbase-master hbase shell
 
 
 
