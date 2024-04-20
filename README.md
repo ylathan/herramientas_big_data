@@ -54,9 +54,13 @@ Para poder ejecutarlo le damos permiso de ejecucion
 ````
     chmod u+x Paso00.sh
 ````
+Con el primer comado ejecutamos todos los scripts dentro del Paso00.sh o podriamos hacerlo manualmente con el segundo comando
 ````
     sudo ./Paso00.sh
-````        
+````
+````
+    sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo>
+````
 Ingresamos al contenedor "namenode":
 ````
     sudo docker exec -it namenode bash
