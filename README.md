@@ -130,15 +130,18 @@ Copia el archivo 'Paso03.hql' desde tu sistema de archivos local al directorio '
 ````        
     sudo docker cp ./Paso03.hql hive-server:/opt/
 ````
-ubicarse dentro del contenedor, acceder al archivo 'Paso03.hql'  en este lugar es donde se realizan los pruebas hay que tener paciencia para que se carge el código.Si accedes a la hive en este lugar puedes realizar las consultas y para salir usas con el comando ('exit;' o 'quit')
+ubicarse en el contenedor 'hive-server', Si accedes a la hive en este lugar puedes realizar las consultas y para salir usas con el comando ('exit;' o 'quit')
 ````
     sudo docker exec -it hive-server bash
 ````
+Ejecutar el script hive para realizar las pruebas
 ````
     hive -f Paso03.hql
 ````
+Salir cuando termines de hacer pruebas.Con cualquiera de los dos comandos.
 ````
-    exit
+    exit;
+    quit;
 ````
 
 ![image](https://github.com/ylathan/Herramientas-de-BigData/assets/98925562/137fdd60-9f2c-433b-b6d3-65ea8083e65a)
