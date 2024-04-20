@@ -78,8 +78,11 @@ Pegamos los archivos csv provistos a HDFS:
 ````
 Este proceso de creación de la carpeta data y copiado de los arhivos, debe poder ejecutarse desde un shell.
 Explicacion de algunos fragmentos de comando usados:
+
 > -it:modo interactivo.Permite al usuario interactuar con el contenedor a través de una terminal.
+
 > -p: para publicar los puertos entre el sistema host y el contenedor.
+
 > -put: especifica que se copiaran los archivos desde el sistema host hacia el HDFS. 
 
 Nota: Busque dfs.blocksize y dfs.replication en http://<IP_Anfitrion>:9870/conf para encontrar los valores de tamaño de bloque y factor de réplica respectivamente entre otras configuraciones del sistema Hadoop.
