@@ -96,6 +96,7 @@ Vamos a utilizar el entorno docker-compose-v2.yml, por lo cual es necesario dete
 ````
     sudo docker stop $(sudo docker ps -a -q)
  ````       
+ Ejecutamos el entorno.
  ````  
     sudo docker-compose -f docker-compose-v2.yml up -d
  ````       
